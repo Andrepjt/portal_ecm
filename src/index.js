@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Login from "views/Login.js";
-import Landing from "views/Lading.js";
+import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
 
 ReactDOM.render(
