@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Login from "views/Login.js";
 import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
+import Question from "views/Question.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route path="/login" component={Login} />
       <Route path="/landing" component={Landing} />
       <Route path="/dashboard" component={Dashboard} />
+      <Route path="/question" component={Question} />
       <Redirect from="/" to="/login" />
     </Switch>
   </BrowserRouter>,
