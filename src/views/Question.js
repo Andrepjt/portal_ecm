@@ -122,7 +122,7 @@ render() {
                           Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          190
+                          1905
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           <i className="fas fa-arrow-down text-red-500 mr-4"></i>
