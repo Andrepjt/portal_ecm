@@ -101,7 +101,7 @@ export default function Sidebar() {
                   <i className="fas fa-user-circle text-gray-500 mr-2 text-sm"></i> Voting
                 </Link>
               </li>
-              
+
             </ul>
             
           </div>

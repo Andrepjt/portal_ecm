@@ -59,7 +59,7 @@ render() {
                           1
                         </th>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          Apakah Anda Pernah Jomblo ?
+                          Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           340
@@ -74,7 +74,7 @@ render() {
                           2
                         </th>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          Apakah Anda Pernah Jomblo ?
+                          Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           319
@@ -89,7 +89,7 @@ render() {
                           3
                         </th>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          Apakah Anda Pernah Jomblo ?
+                          Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           294
@@ -104,7 +104,7 @@ render() {
                          4
                         </th>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          Apakah Anda Pernah Jomblo ?
+                          Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           147
@@ -119,7 +119,7 @@ render() {
                           5
                         </th>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                          Apakah Anda Pernah Jomblo ?
+                          Apakah Zaki Ganteng ?
                         </td>
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
                           190
