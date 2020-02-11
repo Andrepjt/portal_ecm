@@ -14,12 +14,49 @@ class Login extends React.Component {
   }
 
   componentDidMount(){
+    /*
     fetch('http://103.106.174.171:8080/ecm/api/v2/user/profile',{
       headers: { Authorization: "Bearer " + this.state.token }
     })
     .then(response => response.json())
     .then(json => console.log(json))
-    
+    */
+     // Make a request for a user with a given ID
+     axios.get('http://103.106.174.171:8080/ecm/api/v2/user/profile',{
+        headers: { Authorization: "Bearer " + this.state.token }
+     })
+     .then(function (response) {
+       // handle success
+       console.log(response);
+     })
+     .catch(function (error) {
+       // handle error
+       console.log(error);
+     })
+     .then(function () {
+       // always executed
+     });
+
+
+      var token = this.state.token
+
+      axios.get(`http://103.106.174.171:8080/ecm/api/v2/user/profile`, 
+      { 
+        headers: {
+        'Authorization' : `Bearer ${token}`,
+        'Content-Type' : 'application/x-www-form-urlencoded'
+      }, 
+        withCredentials: true,
+        credentials: 'same-origin'
+      })
+      .then(function (response) {
+        console.log(response);
+        return response
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      
     // Make a request for a user with a given ID
     axios.get('http://103.106.174.171:8080/ecm/api/v2/user/check/3710')
       .then(function (response) {
@@ -40,13 +77,17 @@ class Login extends React.Component {
       "npk": this.state.npk,
       "password": this.state.password
     }
-    console.log('data: ', data);
-
+    console.log('data: ', data);    
+    axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
     axios.post('http://103.106.174.171:8080/ecm/api/v2/login',data,{
-      "header" :"Content-Type: application/x-www-form-urlencoded"
-    })
+      "header" :"Content-Type: application/x-www-form-urlencoded",
+      "mode": "cors",
+      "Access-Control-Allow-Origin": "*"
+    }, 
+    {withCredentials: true,
+    credentials: 'same-origin'})
     .then(res => {
-      console.log(res);
+      console.log(res.headers);
       console.log(res.data);
     })
   }
