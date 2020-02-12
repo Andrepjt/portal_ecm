@@ -40,11 +40,10 @@ class Login extends Component {
         })
       }).then(response => response.json())
       .then(json => {
-        console.log(json);
         if(json.Status == 200) {
-          let data  = JSON.stringify(json.data);
+          let token = json.Authorization.slice(7, -6);
+          let data  = JSON.stringify(token);
           localStorage.setItem('auth', data);
-          alert('Sukses Login');
           window.location.reload();
         } else {
           alert('Mohon cek kembali password anda atau kemungkinan anda belum mendaftar');
