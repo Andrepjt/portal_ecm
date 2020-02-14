@@ -22,6 +22,7 @@ class Login extends React.Component {
     .then(json => console.log(json))
     */
      // Make a request for a user with a given ID
+     /*
      axios.get('http://103.106.174.171:8080/ecm/api/v2/user/profile',{
         headers: { Authorization: "Bearer " + this.state.token }
      })
@@ -70,6 +71,7 @@ class Login extends React.Component {
       .then(function () {
         // always executed
       });
+      */
   }
 
   login = () => {
@@ -77,15 +79,12 @@ class Login extends React.Component {
       "npk": this.state.npk,
       "password": this.state.password
     }
-    console.log('data: ', data);    
+    // console.log('data: ', data);    
     axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
     axios.post('http://103.106.174.171:8080/ecm/api/v2/login',data,{
       "header" :"Content-Type: application/x-www-form-urlencoded",
-      "mode": "cors",
       "Access-Control-Allow-Origin": "*"
-    }, 
-    {withCredentials: true,
-    credentials: 'same-origin'})
+    })
     .then(res => {
       console.log(res.headers);
       console.log(res.data);
