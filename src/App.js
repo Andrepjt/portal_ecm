@@ -64,8 +64,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 
 import Login from "views/Login.js";
-import Landing from "views/Lading.js";
+import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
+import Question from "views/Question.js";
 
 
 class App extends Component {
@@ -102,6 +103,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Dashboard} />
             <Route path="/landing" component={Landing} />
+            <Route path="/question" component={Question} />
             <Redirect from="/" to="/login" />
           </Switch>
         }
