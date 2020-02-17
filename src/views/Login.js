@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Link } from "react-router-dom";
 
 import FooterSmall from "components/FooterSmall.js";
 
@@ -120,20 +121,7 @@ class Login extends Component {
                             name="password" onChange={this.password}
                           />
                         </div>
-                        <div>
-                          <label className="inline-flex items-center cursor-pointer">
-                            <input
-                              id="customCheckLogin"
-                              type="checkbox"
-                              className="form-checkbox text-gray-800 ml-1 w-5 h-5"
-                              style={{ transition: "all .15s ease" }}
-                            />
-                            <span className="ml-2 text-sm font-semibold text-gray-700">
-                              Remember me
-                            </span>
-                          </label>
-                        </div>
-
+                        
                         <div className="text-center mt-6">
                           <button
                             onClick={this.submit}
@@ -144,27 +132,17 @@ class Login extends Component {
                             Sign In
                           </button>
                         </div>
+                        <div className="flex flex-wrap mt-6">
+                          <div className="w-full text-center">
+                            <Link
+                              className="text-gray-300"
+                              to="/registration"
+                            >
+                              <small>Create new account</small>
+                            </Link>
+                          </div>
+                        </div>
                       </form>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap mt-6">
-                    <div className="w-1/2">
-                      <a
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                        className="text-gray-300"
-                      >
-                        <small>Forgot password?</small>
-                      </a>
-                    </div>
-                    <div className="w-1/2 text-right">
-                      <a
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                        className="text-gray-300"
-                      >
-                        <small>Create new account</small>
-                      </a>
                     </div>
                   </div>
                 </div>

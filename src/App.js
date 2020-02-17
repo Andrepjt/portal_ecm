@@ -64,6 +64,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 
 import Login from "views/Login.js";
+import Registration from "views/Registration";
 import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
 import Question from "views/Question.js";
@@ -104,6 +105,7 @@ class App extends Component {
             <Route path="/" component={Dashboard} />
             <Route path="/landing" component={Landing} />
             <Route path="/question" component={Question} />
+            <Route path="/registation" component={Registration} />
             <Redirect from="/" to="/login" />
           </Switch>
         }
