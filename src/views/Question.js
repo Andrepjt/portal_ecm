@@ -93,10 +93,7 @@ constructor(props){
 }
 
 componentDidMount(){
-    // fetch("http://103.106.174.171:8080/ecm/api/v2/vote/quis")
-    // .then(response => response.json())
-    // .then(data => this.setState({ items:data }))
-
+    
     fetch('http://103.106.174.171:8080/ecm/api/v2/vote/quis', {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       async: true,
