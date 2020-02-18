@@ -82,7 +82,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
-                  to="/dashboard"
+                  to="/"
                 >
                   <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> Dashboard
                 </Link>

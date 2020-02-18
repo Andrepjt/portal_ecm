@@ -93,9 +93,28 @@ constructor(props){
 }
 
 componentDidMount(){
-    fetch("https://jsonplaceholder.typicode.com/users")
+    // fetch("http://103.106.174.171:8080/ecm/api/v2/vote/quis")
+    // .then(response => response.json())
+    // .then(data => this.setState({ items:data }))
+
+    fetch('http://103.106.174.171:8080/ecm/api/v2/vote/quis', {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      async: true,
+      crossDomain: true,
+      headers: {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOUEsiOiIzNzEwIiwiYXV0aG9yaXplZCI6dHJ1ZSwiZXhwIjoxNTgyMDk2OTkxfQ.RkBCkPoIiqL-akEuHcP4ygpJdjP5fqqWpUFYWaKoYg0",
+        "cache-control": "no-cache",
+      }
+    })
     .then(response => response.json())
-    .then(data => this.setState({ items:data }))
+    .then(json => {
+      this.setState({
+      //   loading: false,
+        items : json.Data,
+      });
+      console.log(json)
+    })
+
 }
 
 
@@ -137,6 +156,18 @@ render() {
                           Question
                         </th>
                         <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                          A
+                        </th>
+                        <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                          B
+                        </th>
+                        <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                          C
+                        </th>
+                        <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
+                          D
+                        </th>
+                        <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
                           Answer
                         </th>
                         <th className="px-6 bg-gray-100 text-gray-600 align-middle border border-solid border-gray-200 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left">
@@ -153,14 +184,27 @@ render() {
                             {item.id}
                           </th>
                           <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                            {item.name}
+                            {item.pertanyaan}
                           </td>
                           <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                            {item.email}
+                            {item.a}
                           </td>
                           <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                            <i className="fas fa-arrow-up text-green-500 mr-4"></i>
-                             {item.website}
+                            {item.b}
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
+                            {item.c}
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
+                            {item.d}
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
+                            {item.jabawan}
+                          </td>
+                          <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
+                            <button className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1" type="button" style={{ transition: "all .15s ease" }}>
+                              Edit
+                            </button>
                           </td>
                         </tr>
 
