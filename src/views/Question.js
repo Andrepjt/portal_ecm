@@ -93,13 +93,16 @@ constructor(props){
 }
 
 componentDidMount(){
-    
+    // fetch("http://103.106.174.171:8080/ecm/api/v2/vote/quis")
+    // .then(response => response.json())
+    // .then(data => this.setState({ items:data }))
+
     fetch('http://103.106.174.171:8080/ecm/api/v2/vote/quis', {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       async: true,
       crossDomain: true,
       headers: {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOUEsiOiIzNzEwIiwiYXV0aG9yaXplZCI6dHJ1ZSwiZXhwIjoxNTgyMDAwOTcyfQ.42aJi8-SFogq2huxwNtSar_ngoA-4P1eNGVptr33rJo",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOUEsiOiIzNzEwIiwiYXV0aG9yaXplZCI6dHJ1ZSwiZXhwIjoxNTgyMDk2OTkxfQ.RkBCkPoIiqL-akEuHcP4ygpJdjP5fqqWpUFYWaKoYg0",
         "cache-control": "no-cache",
       }
     })
