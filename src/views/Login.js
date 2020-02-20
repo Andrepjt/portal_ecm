@@ -94,7 +94,7 @@ class Login extends Component {
                       <hr className="mt-6 border-b-1 border-gray-400" />
                     </div>
                     <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                      <form>
+                      <form onSubmit={this.submit}>
                         <div className="relative w-full mb-3">
                           <label
                             className="block uppercase text-white text-xs font-bold mb-2"
@@ -142,9 +142,9 @@ class Login extends Component {
 
                         <div className="text-center mt-6">
                           <button
-                            onClick={this.submit}
+                            
                             className="bg-ecm-light text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
-                            type="button"
+                            type="submit"
                             style={{ transition: "all .15s ease" }}
                           >
                           {
