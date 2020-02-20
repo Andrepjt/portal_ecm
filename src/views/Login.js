@@ -42,10 +42,10 @@ class Login extends Component {
         body : JSON.stringify({
           npk : this.state.npk,
           password : this.state.password,
-          loading : false
         })
       }).then(response => response.json())
       .then(json => {
+        this.setState({loading : false});
         if(json.Status === 200) {
           let token = json.Authorization.slice(7);
           let data  = JSON.stringify(token);
