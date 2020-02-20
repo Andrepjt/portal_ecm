@@ -8,7 +8,7 @@ export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
     <>
-      <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-no-wrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
+      <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-no-wrap md:overflow-hidden shadow-xl bg-ecm flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-no-wrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           {/* Toggler */}
           <button
@@ -23,7 +23,15 @@ export default function Sidebar() {
             className="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
+<<<<<<< HEAD
             ECM AGIT 2020
+=======
+            <img
+              alt="..."
+              className="w-20 mr-1"
+              src={require("assets/img/logo.png")}
+            />
+>>>>>>> 4d37fcae77919e5ed60424d7a49d97a2e059d5c6
           </Link>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
@@ -78,6 +86,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link
                   className="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+<<<<<<< HEAD
                   to="/dashboard"
                 >
                   <i className="fas fa-user opacity-75 mr-2 text-sm"></i> User Management
@@ -102,6 +111,40 @@ export default function Sidebar() {
                 </Link>
               </li>
 
+=======
+                  to="/"
+                >
+                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> Dashboard
+                </Link>
+              </li>
+              <li className="items-center">
+                <a
+                  className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  href="https://kahoot.it/"
+                >
+                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> kahoot.it
+                </a>
+              </li>
+              <li className="items-center">
+                <a
+                  className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  href="https://www.menti.com/"
+                >
+                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> menti.com
+                </a>
+              </li>
+
+
+
+              <li className="items-center">
+                <Link
+                  className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
+                  onClick={() => {localStorage.removeItem('auth'); window.location.reload();}}
+                >
+                  <i className="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i> Logout
+                </Link>
+              </li>
+>>>>>>> 4d37fcae77919e5ed60424d7a49d97a2e059d5c6
             </ul>
             
           </div>

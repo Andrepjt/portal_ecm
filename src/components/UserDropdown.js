@@ -77,9 +77,9 @@ const UserDropdown = () => {
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
           }
-          onClick={e => e.preventDefault()}
+          onClick={() => {localStorage.removeItem('auth'); window.location.reload();}}
         >
-          Seprated link
+          Logout
         </a>
       </div>
     </>
