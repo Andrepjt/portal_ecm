@@ -188,6 +188,8 @@ class Dashboard extends Component{
                   </div>
                   <div className="p-4 flex-auto">
                     {/* Chart */}
+
+                    {/*
                     <table style={{borderWidth: 1}}>
                       <thead>
                         <tr>
@@ -244,7 +246,12 @@ class Dashboard extends Component{
                         </tr>
                       </tbody>
 
-                    </table>
+                    </table>*/}
+                    <img
+                      alt="..."
+                      className="w-20 mr-1"
+                      src={require("assets/img/peta.jpeg")}
+                    />
                     <br></br>
                   </div>
                 </div>
@@ -308,13 +315,7 @@ class Dashboard extends Component{
                 <div className="flex flex-wrap items-center md:justify-between justify-center">
                   <div className="w-full md:w-4/12 px-4">
                     <div className="text-sm text-gray-600 font-semibold py-1">
-                      Copyright © {new Date().getFullYear()}{" "}
-                      <a
-                        href="#"
-                        className="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
-                      >
-                        Astra Graphia IT
-                      </a>
+                      Copyright © {new Date().getFullYear()}{" "} Astra Graphia IT
                     </div>
                   </div>
                 {/*
