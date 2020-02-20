@@ -269,12 +269,24 @@ class Dashboard extends Component{
                     </div>
                     <div className="p-4 flex-auto">
                       {
-                        this.state.news.map(list => (
-                          <ul>
-                            <li>{i++}. {list.title}</li>
-                          </ul>
-                        ))
+                        (this.state.news.length == 0 ) &&
+                        <div>
+                          Data belum diload
+                        </div>
                       }
+                      {
+                        (this.state.news.length > 0 ) &&
+                        <div>
+                          {
+                            this.state.news.map(list => (
+                              <ul>
+                                <li>{i++}. {list.title}</li>
+                              </ul>
+                            ))
+                          }
+                        </div>
+                      }
+
                     </div>
                   </div>
                 </div>
