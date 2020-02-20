@@ -397,6 +397,10 @@ img {
     background-color: #ec9235;
 }
 
+.text-ecm-light{
+    color: #ec9235;
+}
+
 .bg-black {
     background-color: #000
 }
@@ -2425,6 +2429,10 @@ img {
 
 .w-16 {
     width: 4rem
+}
+
+.w-48 {
+    width: 12rem
 }
 
 .w-auto {
