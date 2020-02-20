@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Link } from "react-router-dom";
 
 import FooterSmall from "components/FooterSmall.js";
 
@@ -99,9 +98,9 @@ class Login extends Component {
 
   submit = (e) => {
     e.preventDefault();
-    if(this.state.npk.trim() == "") {
+    if(this.state.npk.trim() === "") {
       alert('NPK tidak boleh kosong');
-    } else if(this.state.password.trim() == "") {
+    } else if(this.state.password.trim() === "") {
       alert('Password tidak boleh kosong');
     } else {
       fetch('http://103.106.174.171:8080/ecm/api/v2/login', {
@@ -116,7 +115,7 @@ class Login extends Component {
         })
       }).then(response => response.json())
       .then(json => {
-        if(json.Status == 200) {
+        if(json.Status === 200) {
           let token = json.Authorization.slice(7, -6);
           let data  = JSON.stringify(token);
           localStorage.setItem('auth', data);
