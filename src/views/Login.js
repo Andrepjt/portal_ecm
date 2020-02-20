@@ -83,7 +83,7 @@ class Login extends Component {
                         >
                           <img
                             alt="..."
-                            className="w-20 mr-1"
+                            className="w-48"
                             src={require("assets/img/logo.png")}
                           />
                         </button>
@@ -97,30 +97,43 @@ class Login extends Component {
                       <form>
                         <div className="relative w-full mb-3">
                           <label
-                            className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase text-white text-xs font-bold mb-2"
                             htmlFor="grid-password"
                           >
                             NPK
                           </label>
-                          <input
+                           <span className="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                            <i className="fas fa-user"></i>
+                          </span>
+                          <input type="text" 
+                            placeholder="NPK"
+                            style={{ transition: "all .15s ease" }}
+                            name="npk" onChange={this.npk}
+                            className="px-3 py-3 pl-10 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                            />
+                          
+                          {/*<input
                             type="NPK"
                             className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="NPK"
                             style={{ transition: "all .15s ease" }}
                             name="npk" onChange={this.npk}
-                          />
+                          />*/}
                         </div>
 
                         <div className="relative w-full mb-3">
                           <label
-                            className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                            className="block uppercase text-white text-xs font-bold mb-2"
                             htmlFor="grid-password"
                           >
                             Password
                           </label>
+                          <span className="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+                            <i className="fas fa-lock"></i>
+                          </span>
                           <input
                             type="password"
-                            className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                            className="px-3 py-3 pl-10 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Password"
                             style={{ transition: "all .15s ease" }}
                             name="password" onChange={this.password}
@@ -145,12 +158,12 @@ class Login extends Component {
 
                           </button>
                         </div>
-                        <div className="flex flex-wrap mt-6">
+                        <div className="flex flex-wrap mt-2">
                           <div className="w-full text-center">
                             <div className="relative w-full px-1 max-w-full flex-grow flex-1 text-center">
                               <Link to={'/register'}>
                                 <button
-                                  className="text-white active:bg-ecm font-bold uppercase text-sm px-12 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                  className="text-ecm-light active:bg-ecm font-bold uppercase text-sm px-12 py-1 rounded shadow hover:shadow-lg outline-none focus:outline-none"
                                   type="button"
                                 >
                                   <small>Create new account</small>
