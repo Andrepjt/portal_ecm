@@ -12,7 +12,8 @@ class Login extends Component {
     super();
     this.state = {
       npk : "",
-      password : ""
+      password : "",
+      loading : false,
     }
   }
 
@@ -31,6 +32,7 @@ class Login extends Component {
     } else if(this.state.password.trim() === "") {
       alert('Password tidak boleh kosong');
     } else {
+      this.setState({loading : true});
       fetch('http://103.106.174.171:8080/ecm/api/v2/login', {
         method : 'POST',
         headers: {
@@ -39,17 +41,16 @@ class Login extends Component {
         },
         body : JSON.stringify({
           npk : this.state.npk,
-          password : this.state.password
+          password : this.state.password,
+          loading : false
         })
       }).then(response => response.json())
       .then(json => {
-
         if(json.Status === 200) {
           let token = json.Authorization.slice(7);
           let data  = JSON.stringify(token);
-          console.log('ini ', data);
           localStorage.setItem('auth', data);
-          //window.location.reload();
+          window.location.reload();
         } else {
           alert('Mohon cek kembali password anda atau kemungkinan anda belum mendaftar');
         }
@@ -134,7 +135,15 @@ class Login extends Component {
                             type="button"
                             style={{ transition: "all .15s ease" }}
                           >
-                            Sign In
+                          {
+                            (this.state.loading == false) &&
+                            <div>Sign In</div>
+                          }
+                          {
+                            (this.state.loading == true) &&
+                            <div>Loading...</div>
+                          }
+
                           </button>
                         </div>
                         <div className="flex flex-wrap mt-6">

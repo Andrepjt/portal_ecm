@@ -53,7 +53,7 @@ class Registrasi extends Component {
         }
       }).then(response => response.json())
       .then(json => {
-        console.log(json);
+        this.setState({ loading : false });
         if(json.Status == 200) {
           this.setState({
             part : true,
@@ -76,6 +76,7 @@ class Registrasi extends Component {
     } else if(this.state.password !== this.state.confirm_password) {
       alert('PASSWORD DAN CONFIRM TIDAK SAMA!');
     } else {
+      this.setState({ loading : true});
       let bulan = this.state.date.getMonth() + 1;
       let tanggal  = this.state.date.getFullYear() + '-' + bulan + '-' + this.state.date.getDate();
       fetch('http://103.106.174.171:8080/ecm/api/v2/user/registration', {
@@ -93,6 +94,7 @@ class Registrasi extends Component {
         })
       }).then(response => response.json())
       .then(json => {
+        this.setState({ loading : false });
         if(json.Status == 201) {
           alert('Berhasil membuat akun!, Silahkan Login');
           setTimeout(()=>{
@@ -152,7 +154,15 @@ class Registrasi extends Component {
                               type="button"
                               style={{ transition: "all .15s ease" }}
                             >
-                              Checking Npk
+                            {
+                              (this.state.loading == true) &&
+                              <div>Loading...</div>
+                            }
+                            {
+                              (this.state.loading == false) &&
+                              <div>Checking Npk</div>
+                            }
+
                             </button>
                           </div>
 
@@ -274,7 +284,15 @@ class Registrasi extends Component {
                               type="button"
                               style={{ transition: "all .15s ease" }}
                             >
-                              Sign Up
+                              {
+                                (this.state.loading == true) &&
+                                <div>Loading...</div>
+                              }
+                              {
+                                (this.state.loading == false) &&
+                                <div>Sign Up</div>
+                              }
+
                             </button>
                           </div>
 
