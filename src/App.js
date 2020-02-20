@@ -42,27 +42,29 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        {
-          (this.state.auth === false) &&
-          <div>
-            <Route path="/" component={Login}/>
-            <Route path="/register" component={Registrasi} />
-          </div>
-        }
+      <div>
+
+
+      {
+        (this.state.auth === false) &&
+        <Router>
+          <Route path="/" component={Login}/>
+          <Route path="/register" component={Registrasi} />
+        </Router>
+      }
+
+
         {
           (this.state.auth === true) &&
-          <div>
+          <Router>
             <Switch>
               <Route path="/" component={Dashboard} />
-              <Route path="/landing" component={Landing} />
-              <Route path="/question" component={Question} />
               <Route path="/logout">{this.logout}</Route>
             </Switch>
-          </div>
+          </Router>
         }
 
-      </Router>
+      </div>
     );
   }
 }
