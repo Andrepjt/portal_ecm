@@ -313,13 +313,14 @@ class Dashboard extends Component{
                     <div className="text-sm text-gray-600 font-semibold py-1">
                       Copyright © {new Date().getFullYear()}{" "}
                       <a
-                        href="https://www.creative-tim.com"
+                        href="#"
                         className="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
                       >
-                        Creative Tim
+                        Astra Graphia IT
                       </a>
                     </div>
                   </div>
+                {/*
                   <div className="w-full md:w-8/12 px-4">
                     <ul className="flex flex-wrap list-none md:justify-end  justify-center">
                       <li>
@@ -356,6 +357,7 @@ class Dashboard extends Component{
                       </li>
                     </ul>
                   </div>
+                  */}
                 </div>
               </div>
             </footer>
