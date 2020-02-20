@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from "views/Login.js";
+import Registrasi from "views/Registrasi.js";
 import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
 import Question from "views/Question.js";
@@ -33,7 +34,11 @@ class App extends Component {
       <BrowserRouter>
         {
           (this.state.auth === false) &&
-          <Route path="/" exact component={Login}/>  
+          <Switch>
+            <Route path="/" exact component={Login}/>
+            <Route path="/register" component={Registrasi} />
+          </Switch>
+
         }
         {
           (this.state.auth === true) &&

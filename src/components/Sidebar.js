@@ -87,24 +87,24 @@ export default function Sidebar() {
                   <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> Dashboard
                 </Link>
               </li>
-
               <li className="items-center">
-                <Link
-                  className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
-                  to="/landing"
+                <a
+                  className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  href="https://kahoot.it/"
                 >
-                  <i className="fas fa-newspaper text-gray-500 mr-2 text-sm"></i> Landing Page
-                </Link>
+                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> kahoot.it
+                </a>
+              </li>
+              <li className="items-center">
+                <a
+                  className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                  href="https://www.menti.com/"
+                >
+                  <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> menti.com
+                </a>
               </li>
 
-              <li className="items-center">
-                <Link
-                  className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
-                  to="/question"
-                >
-                  <i className="fas fa-user-circle text-gray-500 mr-2 text-sm"></i> Questioner
-                </Link>
-              </li>
+
 
               <li className="items-center">
                 <Link

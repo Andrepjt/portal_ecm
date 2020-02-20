@@ -122,12 +122,6 @@ export default function LineChart() {
               </div>
             </div>
           </div>
-          <div className="p-4 flex-auto">
-            {/* Chart */}
-            <div className="relative" style={{ height: "350px" }}>
-              <canvas id="line-chart"></canvas>
-            </div>
-          </div>
         </div>
       </div>
     </>

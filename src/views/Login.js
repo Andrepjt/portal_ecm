@@ -2,82 +2,10 @@ import React, {Component} from "react";
 
 import FooterSmall from "components/FooterSmall.js";
 
-function Modal() {
-
-  const [showModal, setShowModal] = React.useState(false);
-  return (
-    <>
-      <button
-        className="text-white active:bg-ecm font-bold uppercase text-sm px-12 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-        type="button"
-        style={{ transition: "all .15s ease" }}
-        onClick={() => setShowModal(true)}
-      >
-        <small>Create new account</small>
-      </button>
-      {showModal ? (
-        <>
-          <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-            
-          >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-gray-800 rounded-t">
-                  <h6 className="text-6lg font-semibold">
-                    Check & Create User
-                  </h6>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
-                  </button>
-                </div>
-                {/*body*/}
-                <div className="relative p-6 flex-auto">
-                <form>
-                <div className="relative flex w-full flex-wrap items-stretch mb-3">
-                  <input type="text" placeholder="NPK" className="px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full pr-10"/>
-                  <span className="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
-                    <i className="fas fa-user"></i>
-                  </span>
-                </div>
-                </form>
-                </div>
-                {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
-                  <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
-                    type="button"
-                    style={{ transition: "all .15s ease" }}
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
-                  <button
-                    className="bg-ecm-light text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="button"
-                    style={{ transition: "all .15s ease" }}
-                    onClick={() => setShowModal(false)}
-                  >
-                    Check NPK
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </>
-      ) : null}
-    </>
-  );
-  
-}
+import {
+  Link,
+  Redirect
+} from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -115,11 +43,13 @@ class Login extends Component {
         })
       }).then(response => response.json())
       .then(json => {
+
         if(json.Status === 200) {
-          let token = json.Authorization.slice(7, -6);
+          let token = json.Authorization.slice(7);
           let data  = JSON.stringify(token);
+          console.log('ini ', data);
           localStorage.setItem('auth', data);
-          window.location.reload();
+          //window.location.reload();
         } else {
           alert('Mohon cek kembali password anda atau kemungkinan anda belum mendaftar');
         }
@@ -196,7 +126,7 @@ class Login extends Component {
                             name="password" onChange={this.password}
                           />
                         </div>
-                        
+
                         <div className="text-center mt-6">
                           <button
                             onClick={this.submit}
@@ -210,7 +140,14 @@ class Login extends Component {
                         <div className="flex flex-wrap mt-6">
                           <div className="w-full text-center">
                             <div className="relative w-full px-1 max-w-full flex-grow flex-1 text-center">
-                              <Modal/>
+                              <Link to={'/register'}>
+                                <button
+                                  className="text-white active:bg-ecm font-bold uppercase text-sm px-12 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                  type="button"
+                                >
+                                  <small>Create new account</small>
+                                </button>
+                              </Link>
                             </div>
                           </div>
                         </div>
