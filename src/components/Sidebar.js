@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import NotificationDropdown from "./NotificationDropdown.js";
 import UserDropdown from "./UserDropdown.js";
@@ -90,7 +91,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <a
                   className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
-                  href="https://kahoot.it/"
+                  href="https://kahoot.it/" target="_blank" rel="noopener noreferrer"
                 >
                   <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> kahoot.it
                 </a>
@@ -98,7 +99,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <a
                   className="text-gray-800 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
-                  href="https://www.menti.com/"
+                  href="https://www.menti.com/" target="_blank" rel="noopener noreferrer"
                 >
                   <i className="fas fa-tv opacity-75 mr-2 text-sm"></i> menti.com
                 </a>

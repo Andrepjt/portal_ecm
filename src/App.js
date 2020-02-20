@@ -29,6 +29,11 @@ class App extends Component {
     }
   }
 
+  logout=(e)=>{
+    localStorage.clear();
+    window.location.href='/';
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -46,6 +51,7 @@ class App extends Component {
             <Route path="/" exact component={Dashboard} />
             <Route path="/landing" component={Landing} />
             <Route path="/question" component={Question} />
+            <Route path="/logout">{this.logout}</Route>
           </Switch>
         }
 

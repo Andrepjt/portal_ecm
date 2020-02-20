@@ -3,8 +3,7 @@ import React, {Component} from "react";
 import FooterSmall from "components/FooterSmall.js";
 
 import {
-  Link,
-  Redirect
+  Link
 } from "react-router-dom";
 
 class Login extends Component {
@@ -136,11 +135,11 @@ class Login extends Component {
                             style={{ transition: "all .15s ease" }}
                           >
                           {
-                            (this.state.loading == false) &&
+                            (this.state.loading === false) &&
                             <div>Sign In</div>
                           }
                           {
-                            (this.state.loading == true) &&
+                            (this.state.loading === true) &&
                             <div>Loading...</div>
                           }
 
