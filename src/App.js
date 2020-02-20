@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Login from "views/Login.js";
 import Registrasi from "views/Registrasi.js";
 import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
 import Question from "views/Question.js";
 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -36,26 +42,27 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         {
           (this.state.auth === false) &&
-          <Switch>
-            <Route path="/" exact component={Login}/>
+          <div>
+            <Route path="/" component={Login}/>
             <Route path="/register" component={Registrasi} />
-          </Switch>
-
+          </div>
         }
         {
           (this.state.auth === true) &&
-          <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/landing" component={Landing} />
-            <Route path="/question" component={Question} />
-            <Route path="/logout">{this.logout}</Route>
-          </Switch>
+          <div>
+            <Switch>
+              <Route path="/" component={Dashboard} />
+              <Route path="/landing" component={Landing} />
+              <Route path="/question" component={Question} />
+              <Route path="/logout">{this.logout}</Route>
+            </Switch>
+          </div>
         }
 
-      </BrowserRouter>
+      </Router>
     );
   }
 }

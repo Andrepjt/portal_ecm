@@ -93,7 +93,7 @@ class Dashboard extends Component{
       headers: {
         'Content-Type': 'application/json',
         'Accept' : 'application/json',
-        'Authorization' : this.state.token
+        'Authorization' : 'Bearer ' + this.state.token
       },
       body : JSON.stringify({
         npk : this.state.person[0].npk,

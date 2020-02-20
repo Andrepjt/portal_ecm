@@ -1,8 +1,8 @@
 {
-  "name": "react-landing-page",
+  "name": "portal_ecm",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://103.106.174.171",
+  "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.11.2",
     "chart.js": "2.9.3",
