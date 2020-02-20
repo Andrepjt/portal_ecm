@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 
 import Sidebar from "components/Sidebar.js";
-import LineChart from "components/LineChart.js";
-import BarChart from "components/BarChart.js";
-
 
 class Dashboard extends Component{
   constructor() {
@@ -39,7 +36,7 @@ class Dashboard extends Component{
       }
     }).then(response => response.json())
     .then(json => {
-      if(json.Status == 200) {
+      if(json.Status === 200) {
         this.setState({
           person : json.Data
         });
@@ -77,7 +74,7 @@ class Dashboard extends Component{
       }
     }).then(response => response.json())
     .then(json => {
-      if(json.Status == 200) {
+      if(json.Status === 200) {
         this.setState({
           status : true
         });
@@ -104,7 +101,7 @@ class Dashboard extends Component{
       })
     }).then(response => response.json())
     .then(json => {
-      if(json.Status == 201) {
+      if(json.Status === 201) {
         window.location.reload();
       } else {
         alert('Sorry, Failed send attendance!');
@@ -142,7 +139,7 @@ class Dashboard extends Component{
                           </div>
                           <div className="relative w-auto pl-4 flex-initial">
                             {
-                              (this.state.status == false) &&
+                              (this.state.status === false) &&
                               <button
                                 onClick={this.submit}
                                 className="bg-ecm-light text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
@@ -153,7 +150,7 @@ class Dashboard extends Component{
                               </button>
                             }
                             {
-                              (this.state.status == true) &&
+                              (this.state.status === true) &&
                               <button
                                 onClick={this.submit}
                                 className="bg-ecm-light text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
@@ -269,7 +266,7 @@ class Dashboard extends Component{
                     </div>
                     <div className="p-4 flex-auto">
                       {
-                        (this.state.news.length == 0 ) &&
+                        (this.state.news.length === 0 ) &&
                         <div>
                           Data belum diload
                         </div>

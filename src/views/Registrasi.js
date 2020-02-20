@@ -2,8 +2,7 @@ import React, {Component} from "react";
 import DatePicker from 'react-date-picker';
 import FooterSmall from "components/FooterSmall.js";
 import {
-  Link,
-  Redirect
+  Link
 } from "react-router-dom";
 
 class Registrasi extends Component {
@@ -39,7 +38,7 @@ class Registrasi extends Component {
 
   submitCheck = (e) => {
     e.preventDefault();
-    if(this.state.npk.trim() == "") {
+    if(this.state.npk.trim() === "") {
       alert('NPK TIDAK BOLEH KOSONG!')
     } else {
       this.setState({
@@ -54,7 +53,7 @@ class Registrasi extends Component {
       }).then(response => response.json())
       .then(json => {
         this.setState({ loading : false });
-        if(json.Status == 200) {
+        if(json.Status === 200) {
           this.setState({
             part : true,
             email : json.Data.email,
@@ -69,9 +68,9 @@ class Registrasi extends Component {
 
   register = (e) => {
     e.preventDefault();
-    if(this.state.password.trim() == "") {
+    if(this.state.password.trim() === "") {
       alert('PASSWORD TIDAK BOLEH KOSONG!');
-    } else if (this.state.confirm_password.trim() == "") {
+    } else if (this.state.confirm_password.trim() === "") {
       alert('CONFIRM PASSWORD TIDAK BOLEH KOSONG!');
     } else if(this.state.password !== this.state.confirm_password) {
       alert('PASSWORD DAN CONFIRM TIDAK SAMA!');
@@ -95,7 +94,7 @@ class Registrasi extends Component {
       }).then(response => response.json())
       .then(json => {
         this.setState({ loading : false });
-        if(json.Status == 201) {
+        if(json.Status === 201) {
           alert('Berhasil membuat akun!, Silahkan Login');
           setTimeout(()=>{
             window.location.reload();
@@ -129,7 +128,7 @@ class Registrasi extends Component {
                     <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                       <br/>
                       {
-                        (this.state.part == false) &&
+                        (this.state.part === false) &&
                         <form>
                           <div className="relative w-full mb-3">
                             <label
@@ -155,11 +154,11 @@ class Registrasi extends Component {
                               style={{ transition: "all .15s ease" }}
                             >
                             {
-                              (this.state.loading == true) &&
+                              (this.state.loading === true) &&
                               <div>Loading...</div>
                             }
                             {
-                              (this.state.loading == false) &&
+                              (this.state.loading === false) &&
                               <div>Checking Npk</div>
                             }
 
@@ -181,7 +180,7 @@ class Registrasi extends Component {
                       }
 
                       {
-                        (this.state.part == true) &&
+                        (this.state.part === true) &&
                         <form>
                           <div className="relative w-full mb-3">
                             <label
@@ -285,11 +284,11 @@ class Registrasi extends Component {
                               style={{ transition: "all .15s ease" }}
                             >
                               {
-                                (this.state.loading == true) &&
+                                (this.state.loading === true) &&
                                 <div>Loading...</div>
                               }
                               {
-                                (this.state.loading == false) &&
+                                (this.state.loading === false) &&
                                 <div>Sign Up</div>
                               }
 
