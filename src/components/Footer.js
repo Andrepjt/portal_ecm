@@ -5,11 +5,11 @@ export default function Footer() {
     <>
       <footer className="relative bg-gray-300 pt-8 pb-6">
         <div
-          className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          className="bottom-auto top-0 left-0 right-0 w-full  pointer-events-none overflow-hidden -mt-20"
           style={{ height: "80px", transform: "translateZ(0)" }}
         >
           <svg
-            className="absolute bottom-0 overflow-hidden"
+            className=" bottom-0 overflow-hidden"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
             version="1.1"
