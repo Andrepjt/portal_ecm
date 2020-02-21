@@ -189,70 +189,69 @@ class Dashboard extends Component{
                   <div className="p-4 flex-auto">
                     {/* Chart */}
 
-                    {/*
-                    <table style={{borderWidth: 1}}>
-                      <thead>
-                        <tr>
-                          <th className="text-white" style={{borderWidth: 1, padding: 10}}>ZONA</th>
-                          <th className="text-white" style={{borderWidth: 1, padding: 10}}>LOKASI KERJA</th>
-                          <th className="text-white" style={{borderWidth: 1, padding: 10}}>PINTU MASUK</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>A1</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>A2</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>A3</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>A4</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>B1</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>TELKOMSEL</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>B2</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASMO3, ASTRA HONDA MOTOR, TRAC, ATDMS & HSO</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>B3</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA INTERNATIONAL</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>B4</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA OTOPARTS, UNITED TRACTORS, WAREHOUSE, FIF, BSD</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
-                        </tr>
-                        <tr>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>C</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>AWARD NOMINEE</td>
-                          <td className="text-white" style={{borderWidth: 1, padding: 10}}>Sesuai Lokasi Kerja</td>
-                        </tr>
-                      </tbody>
-
-                    </table>*/}
                     <img
                       alt="..."
                       className="w-20 mr-1"
                       src={require("assets/img/peta.jpeg")}
                     />
                     <br></br>
+                      <table style={{borderWidth: 1}}>
+                        <thead>
+                          <tr>
+                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>ZONA</th>
+                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>LOKASI KERJA</th>
+                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>PINTU MASUK</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A1</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A2</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A3</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A4</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B1</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>TELKOMSEL</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B2</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASMO3, ASTRA HONDA MOTOR, TRAC, ATDMS & HSO</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B3</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA INTERNATIONAL</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B4</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA OTOPARTS, UNITED TRACTORS, WAREHOUSE, FIF, BSD</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
+                          </tr>
+                          <tr>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>C</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>AWARD NOMINEE</td>
+                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Sesuai Lokasi Kerja</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
                   </div>
                 </div>
               </div>
