@@ -142,7 +142,7 @@ class Dashboard extends Component{
                               (this.state.status === false) &&
                               <button
                                 onClick={this.submit}
-                                className="bg-ecm-light text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                                className="text-ecm-light active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 outline-none focus:outline-none w-full"
                                 type="button"
                                 style={{ transition: "all .15s ease" }}
                               >
@@ -153,7 +153,7 @@ class Dashboard extends Component{
                               (this.state.status === true) &&
                               <button
                                 onClick={this.submit}
-                                className="bg-ecm-light text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                                className="text-ecm-light active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 outline-none focus:outline-none w-full"
                                 type="button"
                                 style={{ transition: "all .15s ease" }}
                               >

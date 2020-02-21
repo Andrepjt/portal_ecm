@@ -24,7 +24,7 @@ const NotificationDropdown = () => {
         ref={btnDropdownRef}
         onClick={e => {
           e.preventDefault();
-          dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
+          {/*dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();*/}
         }}
       >
         <i className="fas fa-bell"></i>
