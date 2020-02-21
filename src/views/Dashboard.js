@@ -146,7 +146,7 @@ class Dashboard extends Component{
                                 type="button"
                                 style={{ transition: "all .15s ease" }}
                               >
-                                PRESS ON
+                                SERVE OFF
                               </button>
                             }
                             {
@@ -157,7 +157,7 @@ class Dashboard extends Component{
                                 type="button"
                                 style={{ transition: "all .15s ease" }}
                               >
-                                ALREADY ON
+                                SERVE ON
                               </button>
 
                             }
