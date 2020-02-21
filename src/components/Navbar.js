@@ -1,7 +1,5 @@
 import React from "react";
 
-import UserDropdown from "./UserDropdown.js";
-
 export default function Navbar() {
   return (
     <>
@@ -18,7 +16,6 @@ export default function Navbar() {
           </a>
           {/* User */}
           <ul className="flex-col md:flex-row list-none items-center hidden md:flex">
-            <UserDropdown />
           </ul>
         </div>
       </nav>

@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 
 import Login from "views/Login.js";
 import Registrasi from "views/Registrasi.js";
-import Landing from "views/Landing.js";
 import Dashboard from "views/Dashboard.js";
-import Question from "views/Question.js";
-
 
 import {
   BrowserRouter as Router,

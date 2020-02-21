@@ -104,7 +104,7 @@ class Dashboard extends Component{
       if(json.Status === 201) {
         window.location.reload();
       } else {
-        alert('Sorry, Failed send attendance!');
+        alert('You already serve on!');
       }
     }).catch(e => {
       alert('Sorry, Failed send attendance!');
@@ -195,59 +195,59 @@ class Dashboard extends Component{
                       src={require("assets/img/peta.jpeg")}
                     />
                     <br></br>
-                      <table style={{borderWidth: 1}}>
+                      <table className="table border border-gray-200 justify-center content-center text-center">
                         <thead>
-                          <tr>
-                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>ZONA</th>
-                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>LOKASI KERJA</th>
-                            <th className="text-white" style={{borderWidth: 1, padding: 10}}>PINTU MASUK</th>
+                          <tr className="border border-gray-200">
+                            <th className="border text-white text-s" >ZONA</th>
+                            <th className="border text-white text-s" >LOKASI KERJA</th>
+                            <th className="border text-white text-s" >PINTU MASUK</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A1</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
+                            <td className="border text-white text-xs" > A1 </td>
+                            <td className="border text-white text-xs" > KEM </td>
+                            <td className="border text-white text-xs" > Entrance V </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A2</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KEM</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance V</td>
+                            <td className="border text-white text-xs" > A2 </td>
+                            <td className="border text-white text-xs" > KEM </td>
+                            <td className="border text-white text-xs" > Entrance V </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A3</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
+                            <td className="border text-white text-xs" > A3 </td>
+                            <td className="border text-white text-xs" > KRAMAT </td>
+                            <td className="border text-white text-xs" > Entrance I </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>A4</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>KRAMAT</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance I</td>
+                            <td className="border text-white text-xs" > A4 </td>
+                            <td className="border text-white text-xs" > KRAMAT </td>
+                            <td className="border text-white text-xs" > Entrance I </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B1</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>TELKOMSEL</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
+                            <td className="border text-white text-xs" > B1 </td>
+                            <td className="border text-white text-xs" > TELKOMSEL </td>
+                            <td className="border text-white text-xs" > Entrance S </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B2</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASMO3, ASTRA HONDA MOTOR, TRAC, ATDMS & HSO</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance S</td>
+                            <td className="border text-white text-xs" > B2 </td>
+                            <td className="border text-white text-xs" > ASMO3, ASTRA HONDA MOTOR, TRAC, ATDMS & HSO </td>
+                            <td className="border text-white text-xs" > Entrance S </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B3</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA INTERNATIONAL</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
+                            <td className="border text-white text-xs" > B3</td>
+                            <td className="border text-white text-xs" > ASTRA INTERNATIONAL</td>
+                            <td className="border text-white text-xs" > Entrance P </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>B4</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>ASTRA OTOPARTS, UNITED TRACTORS, WAREHOUSE, FIF, BSD</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Entrance P</td>
+                            <td className="border text-white text-xs" > B4 </td>
+                            <td className="border text-white text-xs" > ASTRA OTOPARTS, UNITED TRACTORS, WAREHOUSE, FIF, BSD </td>
+                            <td className="border text-white text-xs" > Entrance P </td>
                           </tr>
                           <tr>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>C</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>AWARD NOMINEE</td>
-                            <td className="text-white" style={{borderWidth: 1, padding: 10}}>Sesuai Lokasi Kerja</td>
+                            <td className="border text-white text-xs" > C </td>
+                            <td className="border text-white text-xs" > AWARD NOMINEE </td>
+                            <td className="border text-white text-xs" > Sesuai Lokasi Kerja </td>
                           </tr>
                         </tbody>
 
@@ -282,7 +282,7 @@ class Dashboard extends Component{
                         <div>
                           {
                             this.state.news.map(list => (
-                              <ul>
+                              <ul key={list.id}>
                                 <li>{i++}. {list.title}</li>
                               </ul>
                             ))

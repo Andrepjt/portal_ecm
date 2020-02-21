@@ -20,7 +20,7 @@ export default function FooterSmall(props) {
                   href="https://www.creative-tim.com"
                   className="text-white hover:text-gray-400 text-sm font-semibold py-1"
                 >
-                  AGIT Developer
+                  Astra Graphia IT
                 </a>
               </div>
             </div>

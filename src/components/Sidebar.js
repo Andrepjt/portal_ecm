@@ -2,9 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import NotificationDropdown from "./NotificationDropdown.js";
-import UserDropdown from "./UserDropdown.js";
-
 export default function Sidebar() {
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
@@ -30,15 +27,6 @@ export default function Sidebar() {
               src={require("assets/img/logo.png")}
             />
           </Link>
-          {/* User */}
-          <ul className="md:hidden items-center flex flex-wrap list-none">
-            <li className="inline-block relative">
-              <NotificationDropdown />
-            </li>
-            <li className="inline-block relative">
-              <UserDropdown />
-            </li>
-          </ul>
           {/* Collapse */}
           <div
             className={
@@ -108,12 +96,12 @@ export default function Sidebar() {
 
 
               <li className="items-center">
-                <Link
+                <button
                   className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   onClick={() => {localStorage.removeItem('auth'); window.location.reload();}}
                 >
                   <i className="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i> Logout
-                </Link>
+                </button>
               </li>
             </ul>
           </div>

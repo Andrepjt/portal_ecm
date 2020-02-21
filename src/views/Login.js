@@ -4,10 +4,6 @@ import FooterSmall from "components/FooterSmall.js";
 
 import DatePicker from 'react-date-picker';
 
-import {
-  Link
-} from "react-router-dom";
-
 class Login extends Component {
   constructor() {
     super();
@@ -170,7 +166,7 @@ class Login extends Component {
   }
 
   render() {
-    if(this.state.register == false) {
+    if(this.state.register === false) {
       return (
         <>
           <main>
@@ -295,7 +291,7 @@ class Login extends Component {
           </main>
         </>
       );
-    } else if (this.state.register == true) {
+    } else if (this.state.register === true) {
       return (
         <>
           <main>
